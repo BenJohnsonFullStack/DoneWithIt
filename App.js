@@ -1,17 +1,17 @@
 // import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, Image, Text } from "react-native";
+import { StyleSheet, View, ImageBackground, Image, Text } from "react-native";
 
 export default function App() {
   return (
-    <View
+    <ImageBackground
+      source={require("./assets/app-hero-bg.webp")}
       style={{
-        backgroundColor: "#fff",
-        flex: 1,
+        width: "100%",
+        height: "100%",
       }}
     >
       <View
         style={{
-          flex: 0.5,
           justifyContent: "center",
           alignItems: "center",
         }}
@@ -21,7 +21,7 @@ export default function App() {
           style={{
             width: 100,
             height: 100,
-            marginTop: 50,
+            marginTop: 100,
           }}
         />
         <Text
@@ -55,7 +55,7 @@ export default function App() {
           }}
         />
       </View>
-    </View>
+    </ImageBackground>
   );
 }
 
