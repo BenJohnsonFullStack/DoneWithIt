@@ -1,5 +1,7 @@
 import { ImageBackground, View, Text, Image, StyleSheet } from "react-native";
 
+import colors from "../config/colors";
+
 function WelcomeScreen() {
   return (
     <ImageBackground
@@ -7,8 +9,10 @@ function WelcomeScreen() {
       style={styles.background}
     >
       <View style={styles.logoContainer}>
-        <Image source={require("../assets/app-logo.png")} style={styles.logo} />
-        <Text>Sell What You Don't Need</Text>
+        <Image
+          source={require("../assets/app-logo.webp")}
+          style={styles.logo}
+        />
       </View>
       <View style={styles.loginButton}></View>
       <View style={styles.registerButton}></View>
@@ -25,21 +29,21 @@ const styles = StyleSheet.create({
   loginButton: {
     width: "100%",
     height: 70,
-    backgroundColor: "#fc5c65",
+    backgroundColor: colors.primary,
   },
   logo: {
-    width: 100,
-    height: 100,
+    width: 278,
+    height: 90,
   },
   logoContainer: {
     position: "absolute",
-    top: 100,
+    top: 160,
     alignItems: "center",
   },
   registerButton: {
     width: "100%",
     height: 70,
-    backgroundColor: "#4ecdc4",
+    backgroundColor: colors.secondary,
   },
 });
 
